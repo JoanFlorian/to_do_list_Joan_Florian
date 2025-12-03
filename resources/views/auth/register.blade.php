@@ -67,7 +67,9 @@
                             <select name="role_id" id="role_id" class="form-control" required>
                                 <option value="">Seleccione un rol</option>
                                 @foreach($roles as $role)
+                                @if ($role->id >1)
                                     <option value="{{ $role->id }}">{{ ucfirst($role->name) }}</option>
+                                @endif
                                 @endforeach
                             </select>
                         </div>
